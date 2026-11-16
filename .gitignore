@@ -1,0 +1,24 @@
+# PAC CLI local metadata / auth profiles — never commit
+.pac/
+*.paccfg
+
+# Binary app packages — commit the unpacked source instead, never the binary
+*.msapp
+
+# Exported/packed solution zips and other build artifacts
+*.zip
+artifacts/
+out/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor / OS
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+
+# Generated early-bound code (regenerate with pac modelbuilder)
+src/**/Model/
