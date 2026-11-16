@@ -37,7 +37,7 @@ Actions, and GitHub Copilot. Content is documentation: `docs/` modules 00–09, 
 
 ## Adding or changing a module
 
-1. Create or edit `docs/NN-name.md` (keep numbering gap-free: 00–09).
+1. Create or edit `docs/NN-name.md` (keep numbering gap-free: 00–10).
 2. Update the agenda table and repository-structure tree in `README.md`.
 3. If the module needs a hands-on task, add `exercises/exercise-N.md` and reference it from the module.
 4. Keep markdownlint clean (CI runs `.github/workflows/docs-validation.yml`): blank lines around

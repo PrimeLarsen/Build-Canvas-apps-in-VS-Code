@@ -19,6 +19,7 @@ By the end of the workshop, participants can:
 7. Use Git branching and pull requests as part of the app lifecycle
 8. Automate export → pack → check → import with **GitHub Actions** (`microsoft/powerplatform-actions`)
 9. Use **GitHub Copilot** as a pair programmer on Power Fx and solution XML — with review discipline
+10. Install **agent plugins** (`@agentPlugins`: `canvas-apps`, `model-apps`, …) and **MCP servers** (Microsoft Learn, Dataverse, PAC CLI) for the best Copilot experience in VS Code
 
 ## 🗓️ Agenda (full day, ~7½ hours)
 
@@ -34,6 +35,7 @@ By the end of the workshop, participants can:
 | 7 | ALM & CI/CD with GitHub Actions | 45 min |
 | 8 | Copilot for canvas apps (Power Fx) | 30 min |
 | 9 | Copilot for solutions & model-driven XML | 30 min |
+| 10 | Agent plugins (`@agentPlugins`) & MCP servers | 30 min |
 | — | Wrap-up & Q&A | 15 min |
 
 ## 📁 Repository structure
@@ -48,7 +50,8 @@ Build-Canvas-apps-in-VS-Code/
 │   └── workflows/
 │       └── docs-validation.yml        ← CI: markdown lint on every push/PR
 ├── .vscode/
-│   └── extensions.json                ← recommended VS Code extensions
+│   ├── extensions.json                ← recommended VS Code extensions
+│   └── mcp.json                       ← Microsoft Learn MCP server preconfigured
 ├── docs/
 │   ├── 00-prerequisites.md            ← tools, extensions, licensing, GitHub
 │   ├── 01-environment-and-auth.md     ← pac auth / pac env / whoami
@@ -59,14 +62,16 @@ Build-Canvas-apps-in-VS-Code/
 │   ├── 06-git-workflow.md             ← branching, PRs, merge-conflict rules
 │   ├── 07-alm-cicd.md                 ← GitHub Actions ALM pipeline
 │   ├── 08-copilot-canvas.md           ← Copilot on Power Fx / .pa.yaml
-│   └── 09-copilot-solutions.md        ← Copilot on solution XML + instructions file
+│   ├── 09-copilot-solutions.md        ← Copilot on solution XML + instructions file
+│   └── 10-agent-plugins-and-mcp.md    ← @agentPlugins plugins & MCP servers (Learn, Dataverse, PAC CLI)
 ├── exercises/
 │   ├── exercise-1.md                  ← first canvas unpack/pack loop
 │   ├── exercise-2.md                  ← edit a canvas app from source & republish
 │   ├── exercise-3.md                  ← model-driven app change via solution XML
 │   ├── exercise-4.md                  ← team flow with pull requests
 │   ├── exercise-5.md                  ← CI pipeline with Solution Checker
-│   └── exercise-6.md                  ← Copilot-accelerated change with review
+│   ├── exercise-6.md                  ← Copilot-accelerated change with review
+│   └── exercise-7.md                  ← install agent plugins + MCP and use them
 ├── scripts/
 │   └── pac-cheatsheet.md              ← every PAC CLI command used in the workshop
 └── .gitignore
@@ -74,7 +79,7 @@ Build-Canvas-apps-in-VS-Code/
 
 ## 🚦 Getting started
 
-Start in [docs/00-prerequisites.md](docs/00-prerequisites.md) and follow the modules in order 0 → 9. Each module ends with a ✅ checkpoint.
+Start in [docs/00-prerequisites.md](docs/00-prerequisites.md) and follow the modules in order 0 → 10. Each module ends with a ✅ checkpoint.
 
 ## 📚 Sources
 
@@ -94,3 +99,10 @@ Start in [docs/00-prerequisites.md](docs/00-prerequisites.md) and follow the mod
 - [Generate early-bound classes for the SDK for .NET — Microsoft Learn](https://learn.microsoft.com/en-us/power-apps/developer/data-platform/org-service/generate-early-bound-classes)
 - [GitHub Copilot in VS Code — documentation](https://code.visualstudio.com/docs/copilot/overview)
 - [Customize Copilot with instructions files — VS Code docs](https://code.visualstudio.com/docs/copilot/copilot-customization)
+- [Add and use MCP servers in VS Code — VS Code docs](https://code.visualstudio.com/docs/agent-customization/mcp-servers)
+- [Get started with the Microsoft Learn MCP Server — Microsoft Learn](https://learn.microsoft.com/en-us/training/support/mcp-get-started)
+- [Connect to Dataverse with MCP — Microsoft Learn](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/data-platform-mcp)
+- [Connect Dataverse MCP with GitHub Copilot in VS Code — Microsoft Learn](https://learn.microsoft.com/en-us/power-apps/maker/data-platform/data-platform-mcp-vscode)
+- [Use the PAC CLI built-in MCP server — Microsoft Learn](https://learn.microsoft.com/en-us/power-platform/developer/howto/use-mcp)
+- [awesome-copilot — community Copilot agents/instructions/plugins (GitHub)](https://github.com/github/awesome-copilot)
+- [power-platform-skills — official Microsoft plugin marketplace (`canvas-apps`, `model-apps`, …) (GitHub)](https://github.com/microsoft/power-platform-skills)

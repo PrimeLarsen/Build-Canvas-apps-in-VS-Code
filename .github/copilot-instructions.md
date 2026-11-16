@@ -6,7 +6,7 @@ This file is read automatically by GitHub Copilot when generating content and wo
 
 A hands-on workshop repository that teaches Power Platform developers to build **canvas apps** and
 **model-driven apps** in **Visual Studio Code** with the Power Platform CLI (PAC CLI), Git, GitHub
-Actions, and GitHub Copilot. Content: `docs/` modules 00–09, `exercises/`, `scripts/pac-cheatsheet.md`,
+Actions, and GitHub Copilot. Content: `docs/` modules 00–10, `exercises/`, `scripts/pac-cheatsheet.md`,
 `README.md`, plus `.github/` automation.
 
 ## Non-negotiable rules
@@ -25,9 +25,16 @@ Actions, and GitHub Copilot. Content: `docs/` modules 00–09, `exercises/`, `sc
   is `.msapp` and is never committed; model-driven apps are app module components inside solutions,
   unpacked to XML (or YAML in recent CLI versions).
 - **No secrets**: never commit `.pac/`, `*.paccfg`, connection IDs, client secrets, or real
-  credential-bearing URLs. Use placeholders like `https://yourorg.crm4.dynamics.com`.
+  credential-bearing URLs. Use placeholders like `https://yourorg.crm4.dynamics.com`. MCP config files
+  must not contain tokens — only URLs and commands.
 - **Naming in examples**: publisher prefix `wsp`, solution `WorkshopCore`, tables `wsp_*`, app
   "Workshop Hub", canvas app "My App".
+- **Agent plugins & MCP** (module 10): reference only official marketplaces (`microsoft/power-platform-skills`,
+  `github/awesome-copilot`) with their exact plugin names (`canvas-apps`, `model-apps`,
+  `power-platform-architect`, `dataverse`, …), state that third-party plugin content must be inspected
+  before installing, and give MCP setup via the guided `MCP: Add Server` flow plus the config-file
+  snippets (`servers` in `.vscode/mcp.json`, `mcpServers` in portable `.mcp.json`). Note the Dataverse
+  MCP prerequisites (admin must allow the GitHub Copilot client; Copilot Credits billing since 2025-12-15).
 
 ## How to work in this repo
 

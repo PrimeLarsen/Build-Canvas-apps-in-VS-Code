@@ -54,6 +54,16 @@ pac data export --schemaFile ./artifacts/schema.xml --dataFile ./artifacts/seed.
 pac data import --dataFile ./artifacts/seed.zip
 ```
 
+## Copilot / MCP (module 10)
+
+```bash
+pac copilot mcp --run    # built-in MCP server (PAC CLI 1.44+): let Copilot run pac commands via natural language
+# or without installing PAC CLI: dnx Microsoft.PowerApps.CLI.Tool --yes copilot mcp --run
+```
+
+MCP servers to add in VS Code (`MCP: Add Server`): Microsoft Learn `https://learn.microsoft.com/api/mcp`
+(shipped in `.vscode/mcp.json`), Dataverse `<your instance URL>/api/mcp` — see [docs/10-agent-plugins-and-mcp.md](../docs/10-agent-plugins-and-mcp.md).
+
 ## CI/CD (GitHub Actions)
 
 Use the official actions from [microsoft/powerplatform-actions](https://github.com/microsoft/powerplatform-actions):

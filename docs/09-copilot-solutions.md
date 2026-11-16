@@ -46,6 +46,9 @@ Pack + Solution Checker after every AI-assisted change — same discipline as mo
 - The repo's `copilot-instructions.md` keeps suggestions consistent (naming `wsp_`, English, honest
   about deprecations) — improve that file when you find a rule worth adding
 
+> Next: [module 10](10-agent-plugins-and-mcp.md) shows how to install agent plugins (`@agentPlugins`)
+> and MCP servers (Microsoft Learn, Dataverse, PAC CLI) that make Copilot even more effective here.
+
 ## ✅ Checkpoint
 
 - [ ] You made one AI-assisted edit to solution XML (sitemap, view, ribbon, or form)
